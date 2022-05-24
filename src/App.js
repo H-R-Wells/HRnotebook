@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Notes from './components/Notes';
 import About from './components/About';
 import NoteState from './context/notes/NotesState';
+import Temp from './components/Temp';
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,18 +21,18 @@ function App() {
   // useStates for Navbar
   const [mode, setMode] = useState("bg-gray-800 text-gray-300");
   const [about, setAbout] = useState("md:hover:bg-gray-700 text-white hover:text-white");
-  const [home, setHome] = useState("bg-gray-900 text-white md:border-0 border-2 border-white");
+  const [home, setHome] = useState("bg-gray-900 text-white sm:border-0 border-2 border-white");
   const [navBtn, setNavBtn] = useState("hidden");
   const [navBtn2, setNavBtn2] = useState("block");
   const [navMenu, setNavMenu] = useState("hidden");
   const [profile, setProfile] = useState("hidden");
 
 
-    // useStates for TextForms
-    const [mainBox, setMainBox] = useState("bg-gray-700");
-    const [mainBox2, setMainBox2] = useState("bg-gray-600");
-    const [textMain, settextMain] = useState('text-white');
-    const [textArea, setTextArea] = useState('bg-slate-300 placeholder-slate-600');
+  // useStates for Card
+  const [mainBox, setMainBox] = useState("bg-gray-700");
+  const [mainBox2, setMainBox2] = useState("bg-gray-600");
+  const [textMain, settextMain] = useState('text-white');
+  const [textArea, setTextArea] = useState('bg-slate-300 placeholder-slate-600');
 
 
   // useStates for alert
@@ -56,7 +57,7 @@ function App() {
     if (mode === "bg-gray-300 text-black") {
       setMode('bg-gray-800 text-gray-300')
       setAbout('md:hover:bg-gray-700 text-white hover:text-white')
-      setHome('bg-gray-900 text-white md:border-0 border-2 border-white')
+      setHome('bg-gray-900 text-white sm:border-0 border-2 border-white')
       showAlert("Success ", " Dark mode is enabled")
       setAlertHide('block')
       setMainBox('bg-gray-700')
@@ -71,7 +72,7 @@ function App() {
     else {
       setMode("bg-gray-300 text-black")
       setAbout('md:hover:bg-gray-200 text-black')
-      setHome('bg-white text-black md:border-0 border-2 border-black')
+      setHome('bg-white text-black sm:border-0 border-2 border-black')
       showAlert("Success ", " Dark mode is disabled")
       setAlertHide('block')
       setMainBox('bg-white')
@@ -139,7 +140,12 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} />} />
-            <Route path="/about" element={<About  mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} />} /><Route path="/notes" element={<Notes />} />
+            <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} />} />
+            <Route path="/notes" element={<Notes mainBox={mainBox} />} />
+
+
+
+            <Route path="/temp" element={<Temp mainBox2={mainBox2} textMain={textMain} />} />
 
           </Routes>
 
