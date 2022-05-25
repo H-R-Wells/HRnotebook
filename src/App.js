@@ -6,7 +6,6 @@ import Home from './components/Home';
 import Notes from './components/Notes';
 import About from './components/About';
 import NoteState from './context/notes/NotesState';
-import Temp from './components/Temp';
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,8 +16,9 @@ import {
 function App() {
 
 
-  // useStates for background
+  // useStates for persnol notes
   const [backG, setBackG] = useState("bg-slate-400")
+  const [tag, setTag] = useState("bg-gray-200")
 
 
   // useStates for Navbar
@@ -33,7 +33,7 @@ function App() {
 
   // useStates for Card
   const [mainBox, setMainBox] = useState("bg-gray-700");
-  const [mainBox2, setMainBox2] = useState("bg-gray-600");
+  const [mainBox2, setMainBox2] = useState("bg-gray-300");
   const [textMain, settextMain] = useState('text-white');
   const [textArea, setTextArea] = useState('bg-slate-300 placeholder-slate-600');
 
@@ -64,10 +64,11 @@ function App() {
       showAlert("Success ", " Dark mode is enabled")
       setAlertHide('block')
       setMainBox('bg-gray-700')
-      setMainBox2('bg-gray-600')
+      setMainBox2('bg-gray-300')
       settextMain('text-white')
       setTextArea('bg-slate-300 placeholder-slate-600')
       setBackG("bg-slate-400")
+      setTag("bg-gray-200")
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
@@ -84,6 +85,7 @@ function App() {
       settextMain('text-black')
       setTextArea('bg-white placeholder-slate-400')      
       setBackG("bg-orange-200")
+      setTag("bg-gray-300")
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
@@ -146,11 +148,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea}  backG={backG} />} />
             <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
-            <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} />} />
+            <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} textMain={textMain} tag={tag} />} />
 
 
-
-            <Route path="/temp" element={<Temp mainBox2={mainBox2} textMain={textMain} />} />
 
           </Routes>
 

@@ -44,7 +44,7 @@ function About(props) {
           </form>
         </div>
       </div>
-      <div className={`justify-center px-5 text-left pt-8 pb-12 md:block md:container  py-0 md:px-12 md:py-12 rounded-lg shadow-lg md:my-12  md:max-w-lg mx-8 transition  ease-in-out duration-500 ${props.mainBox2} ${props.textMain}`}>
+      <div className={`justify-center px-5 text-left pt-8 pb-12 md:block md:container  py-0 md:px-12 md:py-12 rounded-lg shadow-lg md:my-12  md:max-w-lg mx-8 transition  ease-in-out duration-500 ${props.mainBox2}`}>
         <div className='container flex-grow'>
           <h1 className='font-semibold text-4xl '>Your Text Summary</h1>
           <p className='font-medium text-xl'> words and characters</p>

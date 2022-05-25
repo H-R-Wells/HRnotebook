@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import noteContext from "../context/notes/noteContext";
 import NoteItem from './NoteItem';
 
@@ -6,7 +6,14 @@ const Notes = (props) => {
 
 
     const context = useContext(noteContext);
-    const { notes } = context;
+    const { notes , getNotes} = context;
+    useEffect(() => {
+     getNotes()
+      return () => {
+      }
+    }, [])
+    
+
 
 
 
@@ -29,7 +36,7 @@ const Notes = (props) => {
 
 
                 {notes.map((note) => {
-                return <NoteItem key={note._id} note={note} />;
+                return <NoteItem key={note._id} note={note} textMain={props.textMain} mainBox2={props.mainBox2} tag={props.tag} />;
             })}
 
 
