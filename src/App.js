@@ -17,6 +17,9 @@ import {
 function App() {
 
 
+  // useStates for background
+  const [backG, setBackG] = useState("bg-slate-400")
+
 
   // useStates for Navbar
   const [mode, setMode] = useState("bg-gray-800 text-gray-300");
@@ -54,7 +57,7 @@ function App() {
   // function to change mode (dark/light)
   const toggleMode = () => {
     // set dark mode
-    if (mode === "bg-gray-300 text-black") {
+    if (mode === "bg-orange-100 text-black") {
       setMode('bg-gray-800 text-gray-300')
       setAbout('md:hover:bg-gray-700 text-white hover:text-white')
       setHome('bg-gray-900 text-white sm:border-0 border-2 border-white')
@@ -64,21 +67,23 @@ function App() {
       setMainBox2('bg-gray-600')
       settextMain('text-white')
       setTextArea('bg-slate-300 placeholder-slate-600')
+      setBackG("bg-slate-400")
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
     }
     // set light mode
     else {
-      setMode("bg-gray-300 text-black")
-      setAbout('md:hover:bg-gray-200 text-black')
-      setHome('bg-white text-black sm:border-0 border-2 border-black')
+      setMode("bg-orange-100 text-black")
+      setAbout('md:hover:bg-orange-50 text-black')
+      setHome('bg-orange-200 text-black sm:border-0 border-2 border-black')
       showAlert("Success ", " Dark mode is disabled")
       setAlertHide('block')
       setMainBox('bg-white')
       setMainBox2('bg-slate-200')
       settextMain('text-black')
-      setTextArea('bg-white placeholder-slate-400')
+      setTextArea('bg-white placeholder-slate-400')      
+      setBackG("bg-orange-200")
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
@@ -139,9 +144,9 @@ function App() {
           <Alert alertHide={alertHide} toggleAlert={toggleAlert} alert={alert} />
 
           <Routes>
-            <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} />} />
-            <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} />} />
-            <Route path="/notes" element={<Notes mainBox={mainBox} />} />
+            <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea}  backG={backG} />} />
+            <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
+            <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} />} />
 
 
 

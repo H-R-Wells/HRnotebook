@@ -14,7 +14,7 @@ export default function Navbar(props) {
 
 
   return (
-    <div className={`  ${props.mode} transition  ease-in-out duration-500 sticky top-0 z-50`}>
+    <div className={` ${props.mode} shadow-md transition  ease-in-out duration-500 sticky top-0 z-50`}>
       <nav id="navb">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">

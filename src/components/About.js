@@ -12,9 +12,9 @@ function About(props) {
 
 
   return (
-    <div className='md:flex min-w-full justify-center w-full container bg-slate-400 pb-12'>
+    <div className={`flex ${props.backG} transition  ease-in-out duration-500 justify-center py-12`}>
       {/* <!-- main  --> */}
-      <div className="flex w-full max-w-lg bg-slate-400 justify-center py-12">
+      <div className="flex w-full max-w-lg justify-center py-12">
 
         <div className={`mx-8 block container max-w-xs px-9 py-10 md:px-12 lg:py-12 rounded-lg shadow-lg  w-full lg:max-w-2xl transition  ease-in-out duration-500 ${props.mainBox} `}>
           <form>

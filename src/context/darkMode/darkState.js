@@ -17,7 +17,7 @@ const darkState = (props) => {
 
 
   return (
-      <darkContext.Provider value={{mainCard}}>
+      <darkContext.Provider value={mainCard}>
           {props.children}
       </darkContext.Provider>
   )

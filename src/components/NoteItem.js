@@ -12,7 +12,7 @@ const NoteItem = (props) => {
 
 
             <div className="md:min-w-full justify-center container flex">
-                <div className={`rounded-lg shadow-xl max-w-xs bg-white`}>
+                <div className={`rounded-lg shadow-xl max-w-xs bg-gray-100 `}>
                     <div className="p-6 sm:min-w-full container sm:w-80 w-44">
                         <h5 className="text-gray-900 text-2xl font-semibold font-mono mb-2">
                             
@@ -73,4 +73,4 @@ const NoteItem = (props) => {
     )
 }
 
-export default NoteItem
+export default NoteItem 
