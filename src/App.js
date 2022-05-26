@@ -21,6 +21,8 @@ function App() {
   const [tagColor, setTagColor] = useState("bg-gray-200")
 
 
+
+
   // useStates for Navbar
   const [mode, setMode] = useState("bg-gray-800 text-gray-300");
   const [about, setAbout] = useState("md:hover:bg-gray-700 text-white hover:text-white");
@@ -49,7 +51,6 @@ function App() {
       type: type1
     })
   }
-
 
 
 
@@ -83,7 +84,7 @@ function App() {
       setMainBox('bg-white')
       setMainBox2('bg-slate-200')
       settextMain('text-black')
-      setTextArea('bg-white placeholder-slate-400')      
+      setTextArea('bg-white placeholder-slate-400')
       setBackG("bg-orange-200")
       setTagColor("bg-gray-300")
       setTimeout(() => {
@@ -138,6 +139,20 @@ function App() {
   }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       <NoteState>
@@ -146,10 +161,11 @@ function App() {
           <Alert alertHide={alertHide} toggleAlert={toggleAlert} alert={alert} />
 
           <Routes>
-            <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea}  backG={backG} />} />
+            <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
             <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
-            <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} />} />
+            <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} mainBox={mainBox} textArea={textArea} />} />
 
+           
 
 
           </Routes>

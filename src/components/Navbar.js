@@ -78,11 +78,11 @@ export default function Navbar(props) {
 
                   <Link to={'/'}><button type='button'
                     className={`${location.pathname === "/" ? props.home : props.about} transition  ease-in-out duration-300  px-3 py-2 rounded-md text-sm font-medium`}
-                    aria-current="page">Text Control</button></Link>
+                    aria-current="page">Home</button></Link>
 
 
                   <Link to={'/notes'}><button type='button'
-                    className={`${location.pathname === "/notes" ? props.home : props.about} px-3 py-2 rounded-md text-sm font-medium transition  ease-in-out duration-300`}>Notes</button></Link>
+                    className={`${location.pathname === "/notes" ? props.home : props.about} px-3 py-2 rounded-md text-sm font-medium transition  ease-in-out duration-300`}>All Notes</button></Link>
 
 
                   <Link to={'/about'}><button type='button'
@@ -92,7 +92,7 @@ export default function Navbar(props) {
 
 
                   <Link to={'/'}><button type='button'
-                    className={`${props.about} px-3 py-2 rounded-md text-sm font-medium transition  ease-in-out duration-300`}>Calender</button></Link>
+                    className={`${props.about} px-3 py-2 rounded-md text-sm font-medium transition  ease-in-out duration-300`}>Disabled</button></Link>
                 </div>
               </div>
             </div>

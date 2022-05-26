@@ -1,5 +1,6 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import noteContext from "../context/notes/noteContext";
+import Modal from './Modal';
 import NoteItem from './NoteItem';
 
 const Notes = (props) => {
@@ -13,7 +14,15 @@ const Notes = (props) => {
     }, [])
 
 
+    const [hsclose, setHsclose] = useState("hidden")
+    const handleClose = () => setHsclose("hidden")
+    const showModal = () => setHsclose("block")
 
+
+
+    const updateNote=(id)=>{
+
+    }
 
 
 
@@ -32,10 +41,11 @@ const Notes = (props) => {
                     <h1 id="list" className=" font-serif font-extrabold text-2xl md:text-3xl py-10">Your Notes</h1>
                 </div>
 
+                <Modal  mainBox2={props.mainBox2} textMain={props.textMain} tagColor={props.tagColor} mainBox={props.mainBox} textArea={props.textArea} hsclose={hsclose} handleClose={handleClose} />
 
 
                 {notes.map((note) => {
-                    return <NoteItem key={note._id} note={note} textMain={props.textMain} mainBox2={props.mainBox2} tagColor={props.tagColor} />;
+                    return <NoteItem key={note._id} note={note} updateNote={updateNote} textMain={props.textMain} mainBox2={props.mainBox2} tagColor={props.tagColor} showModal={showModal} />;
                 })}
 
 
