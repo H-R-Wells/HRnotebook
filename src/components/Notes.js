@@ -6,13 +6,12 @@ const Notes = (props) => {
 
 
     const context = useContext(noteContext);
-    const { notes , getNotes} = context;
+    const { notes, getNotes } = context;
     useEffect(() => {
-     getNotes()
-      return () => {
-      }
+        getNotes()
+        // eslint-disable-next-line
     }, [])
-    
+
 
 
 
@@ -20,10 +19,10 @@ const Notes = (props) => {
 
     return (
         <div>
-        
+
 
             {/* <!-- Your notes  --> */}
-            <div className={`container min-w-full ${props.backG} transition  ease-in-out duration-500 pb-12 flex flex-wrap justify-center`}>
+            <div className={`container min-w-full ${props.backG} transition  ease-in-out duration-500 pb-12 flex flex-wrap justify-center min-h-screen`}>
 
 
 
@@ -36,8 +35,8 @@ const Notes = (props) => {
 
 
                 {notes.map((note) => {
-                return <NoteItem key={note._id} note={note} textMain={props.textMain} mainBox2={props.mainBox2} tag={props.tag} />;
-            })}
+                    return <NoteItem key={note._id} note={note} textMain={props.textMain} mainBox2={props.mainBox2} tagColor={props.tagColor} />;
+                })}
 
 
 

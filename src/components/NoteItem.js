@@ -36,7 +36,7 @@ const NoteItem = (props) => {
                             {`${!note.description ? "No description added" : note.description}`}...
                         </p>
                         <div>
-                            <span className={`inline-block transition  ease-in-out duration-500 ${props.tag} rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 my-3`}>#{note.tag}</span>
+                            <span className={`inline-block transition  ease-in-out duration-500 ${props.tagColor} rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 my-3`}>#{note.tag}</span>
                         </div>
 
 

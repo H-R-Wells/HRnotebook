@@ -8,7 +8,6 @@ export default function Navbar(props) {
 
   let location = useLocation();
   useEffect(() => {
-    console.log(location);
   }, [location]);
 
 

@@ -18,7 +18,7 @@ function App() {
 
   // useStates for persnol notes
   const [backG, setBackG] = useState("bg-slate-400")
-  const [tag, setTag] = useState("bg-gray-200")
+  const [tagColor, setTagColor] = useState("bg-gray-200")
 
 
   // useStates for Navbar
@@ -68,7 +68,7 @@ function App() {
       settextMain('text-white')
       setTextArea('bg-slate-300 placeholder-slate-600')
       setBackG("bg-slate-400")
-      setTag("bg-gray-200")
+      setTagColor("bg-gray-200")
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
@@ -85,7 +85,7 @@ function App() {
       settextMain('text-black')
       setTextArea('bg-white placeholder-slate-400')      
       setBackG("bg-orange-200")
-      setTag("bg-gray-300")
+      setTagColor("bg-gray-300")
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
@@ -148,7 +148,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea}  backG={backG} />} />
             <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
-            <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} textMain={textMain} tag={tag} />} />
+            <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} />} />
 
 
 
