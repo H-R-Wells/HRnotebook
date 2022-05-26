@@ -1,6 +1,9 @@
 import React from 'react';
 
+
+
 const Modal = (props) => {
+
 
 
 
@@ -29,7 +32,7 @@ const Modal = (props) => {
 
                         <input id="title" type="text"  name="title"
                             className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding  border border-solid border-gray-300  rounded transition ease-in-out  m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            placeholder="Title Name" />
+                            placeholder="Title" />
                     </div>
 
 
@@ -38,14 +41,14 @@ const Modal = (props) => {
 
                         <textarea id="description" name="description" 
                             className={`form-control block  w-full  px-3  py-1.5  text-base  font-normal text-gray-700   bg-clip-padding  border border-solid border-gray-300  rounded  transition  ease-in-out duration-500  focus:text-gray-700 focus:border-blue-600 focus:outline-none ${props.textArea}`}
-                            rows="4" placeholder="Enter Description here"></textarea>
+                            rows="3" placeholder="Enter Description here"></textarea>
                     </div>
                     <div className="form-group mb-6">
-                        <label className={`text-xl form-label transition  ease-in-out duration-500 inline-block mb-2 font-semibold ${props.textMain}`}>Add Tag</label>
+                        <label className={`text-xl form-label transition  ease-in-out duration-500 inline-block mb-2 font-semibold ${props.textMain}`}>Tag</label>
 
                         <input id="tag" name="tag"
                             className={`form-control block  w-full  px-3  py-1.5  text-base  font-normal text-gray-700   bg-clip-padding  border border-solid border-gray-300  rounded  transition  ease-in-out duration-500  focus:text-gray-700 focus:border-blue-600 focus:outline-none ${props.textArea}`}
-                            rows="1" placeholder="Optional"></input>
+                            rows="1" placeholder="Tag"></input>
                     </div>
 
 
@@ -55,10 +58,10 @@ const Modal = (props) => {
 
 
                     {/* Button */}
-                    <div className="flex">
+                    <div className="flex justify-center">
 
                         <button type="submit" 
-                            className=" w-full mx-2 px-2 py-3 md:py-2.5 bg-blue-600 text-white font-medium text-sm leading-tight uppercase rounded shadow-md md:hover:bg-blue-800 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg active:text-gray-400  transition  duration-150 ease-in-out">
+                            className=" w-full px-2 py-3 md:py-2.5 bg-blue-600 text-white font-medium text-sm leading-tight uppercase rounded shadow-md md:hover:bg-blue-800 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg active:text-gray-400  transition  duration-150 ease-in-out">
                             Add to list
                         </button>
                     </div>
