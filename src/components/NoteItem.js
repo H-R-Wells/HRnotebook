@@ -34,7 +34,7 @@ const NoteItem = (props) => {
                             
                             </h5>
                         <p className="text-gray-700 text-base mb-2 ">
-                            {`${!note.description ? "No description added" : note.description}`}...
+                            {`${!note.description ? "No description added" : note.description}`}
                         </p>
                         <div>
                             <span className={`inline-block transition  ease-in-out duration-500 ${props.tagColor} rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 my-3`}>#{note.tag}</span>

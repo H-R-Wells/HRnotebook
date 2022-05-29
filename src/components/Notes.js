@@ -81,7 +81,7 @@ const Notes = (props) => {
                                             <div id="titlediv" className="form-group mb-6">
                                                 <label className={`text-2xl form-label transition  ease-in-out duration-500 inline-block mb-2 font-semibold ${props.textMain}`}>Title</label>
 
-                                                <input id="etitle" onChange={onChange} value={note.etitle} type="text" name="etitle"
+                                                <input id="etitle" onChange={onChange} value={note.etitle}  minLength={3} required type="text" name="etitle"
                                                     className="form-control block w-full px-3 py-1.5 text-base font-medium text-gray-900 bg-white bg-clip-padding  border border-solid border-gray-300  rounded transition ease-in-out  m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                                     placeholder="Title" autoComplete="off" />
                                             </div>
@@ -90,7 +90,7 @@ const Notes = (props) => {
                                             <div className="form-group mb-6">
                                                 <label className={`text-xl form-label transition  ease-in-out duration-500 inline-block mb-2 font-semibold ${props.textMain}`}>Description</label>
 
-                                                <textarea onChange={onChange} value={note.edescription} id="edescription" name="edescription"
+                                                <textarea onChange={onChange} value={note.edescription} id="edescription" name="edescription"  minLength={5} 
                                                     className={`form-control block w-full  px-3  py-1.5  text-base  font-normal text-gray-900   bg-clip-padding  border border-solid border-gray-300  rounded  transition  ease-in-out duration-500  focus:text-gray-700 focus:border-blue-600 focus:outline-none ${props.textArea}`}
                                                     rows="3" placeholder="Enter Description"></textarea>
                                             </div>
@@ -114,8 +114,8 @@ const Notes = (props) => {
                                             {/* Button */}
                                             <div className="flex justify-center">
 
-                                                <button onClick={handleClick} type="button"
-                                                    className=" w-full px-2 py-3 md:py-2.5 bg-blue-600 text-white font-medium text-sm leading-tight uppercase rounded shadow-md md:hover:bg-blue-800 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg active:text-gray-400  transition  duration-150 ease-in-out">
+                                                <button onClick={handleClick} disabled type="button"
+                                                    className=" w-full px-2 py-3 md:py-2.5 bg-blue-600 text-white font-medium text-sm leading-tight uppercase rounded shadow-md md:hover:bg-blue-800 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg active:text-gray-400  transition  duration-150 ease-in-out disabled:bg-blue-500 disabled:md:hover:bg-blue-500 disabled:focus:bg-blue-500 disabled:text-gray-400 disabled:cursor-not-allowed">
                                                     Update Note
                                                 </button>
                                             </div>
