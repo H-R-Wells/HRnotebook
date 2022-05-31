@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import Home from './components/Home';
 import Notes from './components/Notes';
 import About from './components/About';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import NoteState from './context/notes/NotesState';
 import {
   BrowserRouter as Router,
@@ -151,6 +153,7 @@ function App() {
 
 
 
+
   return (
     <>
       <NoteState>
@@ -162,8 +165,10 @@ function App() {
             <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
             <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
             <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} mainBox={mainBox} textArea={textArea} />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
 
-           
+
 
 
           </Routes>

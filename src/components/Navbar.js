@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import hrwells from "./hrwells.jpg";
+// import hrwells from "./hrwells.jpg";
+import blankprofile from "./blankprofile.jpg"
 import PropTypes from 'prop-types';
 import { Link, useLocation } from "react-router-dom";
 
@@ -134,7 +135,7 @@ export default function Navbar(props) {
                     aria-expanded="false"
                     aria-haspopup="true">
                     <span className="sr-only">Open user menu</span>
-                    <img className="h-8 w-8 rounded-full" src={hrwells} alt="" />
+                    <img className="h-8 w-8 rounded-full" src={blankprofile} alt="" />
                   </button>
                 </div>
 
@@ -160,7 +161,7 @@ export default function Navbar(props) {
                     id="user-menu-item-1">
                     Settings
                   </Link>
-                  <Link to='/'
+                  <Link to='/login'
                     className="block px-4 py-2 hover:bg-gray-200 text-sm text-gray-700"
                     role="menuitem"
                     tabIndex="-1"
