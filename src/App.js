@@ -22,6 +22,11 @@ function App() {
   const [backG, setBackG] = useState("bg-slate-400")
   const [tagColor, setTagColor] = useState("bg-gray-200")
 
+  // useStates for login
+  const [logsign, setLogsign] = useState("text-sky-400")
+  const [remText, setRemText] = useState("text-gray-300")
+  const [labelInp, setLabelInp] = useState("peer-focus:text-sky-400")
+  const [bordInp, setBordInp] = useState("focus:border-sky-400")
 
 
 
@@ -72,6 +77,10 @@ function App() {
       setTextArea('bg-slate-300 placeholder-slate-600')
       setBackG("bg-slate-400")
       setTagColor("bg-gray-200")
+      setLogsign("text-sky-400")
+      setRemText("text-gray-300")
+      setBordInp("focus:border-sky-400")
+      setLabelInp("peer-focus:text-blue-400")
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
@@ -89,6 +98,10 @@ function App() {
       setTextArea('bg-white placeholder-slate-400')
       setBackG("bg-orange-200")
       setTagColor("bg-gray-300")
+      setLogsign("text-blue-700")
+      setRemText("text-gray-900")
+      setBordInp("focus:border-blue-600")
+      setLabelInp("peer-focus:text-blue-600")
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
@@ -165,9 +178,8 @@ function App() {
             <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
             <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
             <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} mainBox={mainBox} textArea={textArea} />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-
+            <Route path="/login" element={<Login mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} mainBox={mainBox} textArea={textArea} logsign={logsign} remText={remText} />} />
+            <Route path="/signup" element={<Signup mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} mainBox={mainBox} textArea={textArea} logsign={logsign} remText={remText} bordInp={bordInp} labelInp={labelInp} />} />
 
 
 

@@ -29,7 +29,8 @@ const Notes = (props) => {
         setOpen(true)
     }
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault();
         editNote(note.id, note.etitle, note.edescription, note.etag)
         if (note.etitle.length>3){
             setOpen(false)
@@ -79,7 +80,7 @@ const Notes = (props) => {
                                                 </svg>
                                             </button>
                                         </div>
-                                        <form>
+                                        <form onSubmit={handleClick}>
 
 
 
@@ -120,7 +121,7 @@ const Notes = (props) => {
                                             {/* Button */}
                                             <div className="flex justify-center">
 
-                                                <button onClick={handleClick} type="button"
+                                                <button  type="submit"
                                                     className=" w-full px-2 py-3 md:py-2.5 bg-blue-600 text-white font-medium text-sm leading-tight uppercase rounded shadow-md md:hover:bg-blue-800 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg active:text-gray-400  transition  duration-150 ease-in-out disabled:bg-blue-500 disabled:md:hover:bg-blue-500 disabled:focus:bg-blue-500 disabled:text-gray-400 disabled:cursor-not-allowed">
                                                     Update Note
                                                 </button>

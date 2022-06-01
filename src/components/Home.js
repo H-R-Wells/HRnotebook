@@ -42,7 +42,7 @@ function Home(props) {
                 <div className="flex w-full max-w-lg  justify-center py-12">
 
                     <div className={`mx-8 block  container max-w-xs px-9 py-10 md:px-12 lg:py-12 rounded-lg shadow-lg  w-full lg:max-w-2xl transition  ease-in-out duration-500 ${props.mainBox} `}>
-                        <form>
+                        <form  onSubmit={handleClick}>
 
 
                             {/* Title */}
@@ -83,7 +83,7 @@ function Home(props) {
                             {/* Button */}
                             <div className="flex">
 
-                                <button disabled={note.title.length < 3 || note.description.length < 5} type="button" onClick={handleClick}
+                                <button disabled={note.title.length < 3 || note.description.length < 3} type="submit"
                                     className={` w-full px-2 py-3 md:py-2.5 font-medium text-sm leading-tight uppercase rounded shadow-md  transition  duration-150 ease-in-out  md:hover:bg-blue-800 hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg active:text-gray-400 bg-blue-600 text-white 
                                     disabled:bg-blue-500 disabled:md:hover:bg-blue-500 disabled:focus:bg-blue-500 disabled:text-gray-400 disabled:cursor-not-allowed`}>
                                     Add to Notes

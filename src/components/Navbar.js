@@ -92,8 +92,8 @@ export default function Navbar(props) {
 
 
 
-                  <Link to={'/'}><button type='button'
-                    className={`${props.about} px-3 py-2 rounded-md text-sm font-medium transition  ease-in-out duration-300`}>Disabled</button></Link>
+                  <Link to={'/login'}><button type='button'
+                    className={`${props.about} px-3 py-2 rounded-md text-sm font-medium transition  ease-in-out duration-300`}>Log in</button></Link>
                 </div>
               </div>
             </div>
