@@ -166,7 +166,7 @@ export default function Navbar(props) {
                     role="menuitem"
                     tabIndex="-1"
                     id="user-menu-item-2">
-                    Sign out
+                    Log out
                   </Link>
                 </div>
               </div>
