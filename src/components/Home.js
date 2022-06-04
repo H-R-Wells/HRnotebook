@@ -61,7 +61,7 @@ function Home(props) {
 
                                 <textarea value={note.description} id="description" name="description" onChange={onChange} minLength={3}
                                     className={`form-control block  w-full  px-3  py-1.5  text-base  font-normal text-gray-900   bg-clip-padding  border border-solid border-gray-300  rounded  transition  ease-in-out duration-500  focus:text-gray-700 focus:border-blue-600 focus:outline-none ${props.textArea}`}
-                                    rows="4" placeholder="Enter Description"></textarea>
+                                    rows="2" placeholder="Enter Description"></textarea>
                             </div>
 
 
