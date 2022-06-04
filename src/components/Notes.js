@@ -56,6 +56,7 @@ const Notes = (props) => {
     const handleClick = (e) => {
         e.preventDefault();
         editNote(note.id, note.etitle, note.edescription, note.etag)
+        setOpen(false)
     }
 
 
@@ -170,25 +171,25 @@ const Notes = (props) => {
 
 
             {/* <!-- Your notes  --> */}
-            <div className={`container min-w-full ${props.backG} transition  ease-in-out duration-500 pb-12 flex flex-wrap justify-center min-h-screen`}>
+            <div className={`container min-w-full ${props.backG} transition  ease-in-out duration-500 flex flex-wrap justify-center min-h-screen`}>
 
 
 
 
 
-                <div className={`${notes.length === 0 && "sticky top-16 "} flex min-w-full justify-center container`}>
-                    <h1 className=" font-serif font-extrabold text-2xl md:text-3xl mt-8">{yourNote}</h1>
+                <div className={`${notes.length < 3 && "sticky top-16 "} flex min-w-full justify-center container`}>
+                    <h1 className=" font-serif font-extrabold text-3xl md:text-4xl mt-8">{yourNote}</h1>
                 </div>
-
-
-                <div className="flex max-h-min font-mono container justify-center text-xl md:text-2xl">
-                    {notes.length === 0 && "You don't have any notes 😪🥱"}
-                </div>
-
 
                 {notes.map((note) => {
                     return <NoteItem key={note._id} note={note} updateNote={updateNote} textMain={props.textMain} mainBox2={props.mainBox2} tagColor={props.tagColor} open={open} setOpen={setOpen} />;
                 })}
+
+                <div className="flex max-h-0 font-mono container justify-center text-xl md:text-2xl">
+                    {notes.length === 0 && "You don't have any notes 😪🥱"}
+                </div>
+
+
 
 
 

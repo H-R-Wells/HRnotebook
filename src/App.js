@@ -61,6 +61,12 @@ function App() {
 
 
 
+  // useState for about.js who I am
+  const [textSec, setTextSec] = useState('text-gray-400');
+  // const [, set] = useState(second)
+
+
+
 
   // function to change mode (dark/light)
   const toggleMode = () => {
@@ -84,6 +90,7 @@ function App() {
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
+      setTextSec("text-gray-400")
     }
     // set light mode
     else {
@@ -105,6 +112,7 @@ function App() {
       setTimeout(() => {
         setAlertHide('hidden');
       }, 1500);
+      setTextSec("text-gray-700")
     }
   }
 
@@ -176,7 +184,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
-            <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} />} />
+            <Route path="/about" element={<About mainBox={mainBox} mainBox2={mainBox2} textMain={textMain} textArea={textArea} backG={backG} mode={mode} textSec={textSec} />} />
             <Route path="/notes" element={<Notes mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} mainBox={mainBox} textArea={textArea} />} />
             <Route path="/login" element={<Login mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} mainBox={mainBox} textArea={textArea} logsign={logsign} remText={remText} />} />
             <Route path="/signup" element={<Signup mainBox2={mainBox2} backG={backG} textMain={textMain} tagColor={tagColor} mainBox={mainBox} textArea={textArea} logsign={logsign} remText={remText} bordInp={bordInp} labelInp={labelInp} />} />
